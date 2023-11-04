@@ -44,7 +44,7 @@ li {
 button {
   padding: 17px 30px;
   background-color: #fff;
-  color: #1eb2a6;
+  color: #6A2E35;
   font-weight: 600;
   border: none;
   margin: 30px 10px 0 0;
@@ -60,7 +60,7 @@ button:hover {
   box-shadow: none;
 }
 .primary-btn {
-  background-color: #1eb2a6;
+  background-color: #6A2E35;
   color: #fff;
 }
 
