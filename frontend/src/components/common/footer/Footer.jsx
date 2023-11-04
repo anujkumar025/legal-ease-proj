@@ -20,7 +20,7 @@ const Footer = () => {
       <footer>
         <div className='container padding'>
           <div className='box logo'>
-            <h1>ACADEMIA</h1>
+            <h1>legalEase</h1>
             <span>ONLINE EDUCATION & LEARNING</span>
             <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
 
@@ -31,9 +31,9 @@ const Footer = () => {
           <div className='box link'>
             <h3>Explore</h3>
             <ul>
-              <li>About Us</li>
-              <li>Services</li>
-              <li>Courses</li>
+              {/* <li>About Us</li> */}
+              {/* <li>Services</li> */}
+              {/* <li>Courses</li> */}
               <li>Blog</li>
               <li>Contact us</li>
             </ul>

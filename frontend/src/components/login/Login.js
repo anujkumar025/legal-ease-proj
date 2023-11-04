@@ -2,6 +2,7 @@ import React, { useState, useRef } from 'react';
 import './style.css';
 import axios from 'axios';
 import {useNavigate} from 'react-router-dom';
+// import {LogContext} from './context/LogContext'
 
 
 function Login() {
@@ -27,10 +28,11 @@ function Login() {
 
   async function handleSignIn(){
     if(email && password){
+      navigate('/')
       const user = {email, password};
       await axios.post("http://localhost:5001/login", user)
       .then(res => {
-        alert("dgsdfgdfg");
+        // alert("dgsdfgdfg");
         if(res.data === "User not found"){
           alert("User not registered!");
           // navigate('/login')
@@ -38,13 +40,13 @@ function Login() {
         else{
           console.log('good here');
           alert("You have succesfully logged in");
-          navigate('/home');        
-      }
+        }
         // else if(res.data){alert(res.data);}
       })
     }
     else{
       alert("Invalid Input");
+      navigate('/');        
     }
   }
 
@@ -70,7 +72,8 @@ function Login() {
     }
 
   return (
-    <div ref={containerRef} className="container">
+    <div className='body-new'>
+    <div ref={containerRef} className="container-new">
       <div className={`form-container ${isSignUp ? 'sign-up' : 'sign-in'}`}>
         <form>
           <h1>{isSignUp ? 'Create Account' : 'Sign In'}</h1>
@@ -89,7 +92,7 @@ function Login() {
         </form>
       </div>
       <div className="toggle-container">
-        <div className="toggle">
+        <div className="toggle-new">
           <div className={`toggle-panel toggle-left ${isSignUp ? 'active' : ''}`}>
             <h1>Welcome Back!</h1>
             <p>Enter your personal details to use all site features</p>
@@ -103,6 +106,8 @@ function Login() {
         </div>
       </div>
     </div>
+    </div>
+      
   );
 }
 

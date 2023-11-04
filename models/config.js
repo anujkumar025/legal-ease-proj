@@ -1,8 +1,8 @@
 const mongoose = require('mongoose');
 // const mongodb = require('require');
-const connect = mongoose.connect("mongodb+srv://ffriction73:s958nczcLxp7vSsB@cluster1.erneamf.mongodb.net/?retryWrites=true&w=majority");
+const connect = mongoose.connect("mongodb+srv://ffriction73:UXp4VOWuKV66IOw1@cluster0.vheabqm.mongodb.net/?retryWrites=true&w=majority");
 
-// Check database connected or not
+// UXp4VOWuKV66IOw1
 // ?retryWrites=true&w=majority
 // mongodb+srv://ffriction73:8ClRkF7Szkk6uMGl@cluster0.qicghgy.mongodb.net/legalEase?retryWrites=true&w=majority
 
