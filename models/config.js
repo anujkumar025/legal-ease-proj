@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 // const mongodb = require('require');
-const connect = mongoose.connect("mongodb+srv://ffriction73:8ClRkF7Szkk6uMGl@cluster0.qicghgy.mongodb.net/");
+const connect = mongoose.connect("mongodb+srv://ffriction73:s958nczcLxp7vSsB@cluster1.erneamf.mongodb.net/?retryWrites=true&w=majority");
 
 // Check database connected or not
 // ?retryWrites=true&w=majority
@@ -9,8 +9,8 @@ const connect = mongoose.connect("mongodb+srv://ffriction73:8ClRkF7Szkk6uMGl@clu
 connect.then(() => {
     console.log("Database Connected Successfully");
 })
-.catch(() => {
-    console.log("Database cannot be Connected");
+.catch((err) => {
+    console.log(err);
 })
 
 // Create Schema

@@ -1,20 +1,19 @@
 import React, { useState, useRef } from 'react';
 import './style.css';
 import axios from 'axios';
-// import {useNavigate} from 'react-router-dom';
+import {useNavigate} from 'react-router-dom';
 
 
 function Login() {
-  const [isSignUp, setIsSignUp] = useState(true);
+  const [isSignUp, setIsSignUp] = useState(false);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [name, setName] = useState('');
   const containerRef = useRef(null);
-  // const navigate = useNavigate();
-
+  const navigate = useNavigate();
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
-    // console.log(email);
+    // console.log(email)
   }
 
   const handlePasswordChange = (p) => {
@@ -31,11 +30,16 @@ function Login() {
       const user = {email, password};
       await axios.post("http://localhost:5001/login", user)
       .then(res => {
+        alert("dgsdfgdfg");
         if(res.data === "User not found"){
           alert("User not registered!");
           // navigate('/login')
         }
-        else{alert("You have succesfully logged in");}
+        else{
+          console.log('good here');
+          alert("You have succesfully logged in");
+          navigate('/home');        
+      }
         // else if(res.data){alert(res.data);}
       })
     }
@@ -46,12 +50,12 @@ function Login() {
 
   async function handleSignUp(){
     const user = {name , email, password};
-    console.log(user);
+    // console.log(user);
     if(name && email && password){
       await axios.post("http://localhost:5001/register", user)
       .then(res => {
-        // console.log(res);
-        // alert(res.data);
+        alert("You have successfully registered");
+        setIsSignUp(!isSignUp);
       })
     }
     else{
