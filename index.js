@@ -27,7 +27,7 @@ app.post("/login", async (req, res) => {
             return res.send("wrong Password");
         }
         else {
-            console.log("goodhere2");
+            console.log(check.name);
             return res.send(check.name);
         }
     }
