@@ -3,7 +3,7 @@
 }
 .aboutHome #heading {
   text-align: left;
-  padding: 0;
+  padding: 0; 
 }
 .aboutHome .left img {
   width: 100%;
@@ -78,4 +78,7 @@
   .awrapper {
     height: 50vh;
   }
+}
+.about-img {
+  padding-bottom: 30px;
 }
