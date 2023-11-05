@@ -1,10 +1,20 @@
-import React, { useState } from "react"
+import React, { useState, useContext } from "react"
 import { Link } from "react-router-dom"
 import Head from "./Head"
 import "./header.css"
+import {LogContext} from './../../../context/LogContext'
+import {useNavigate} from "react-router-dom"
+
 
 const Header = () => {
+  const {userEmail,setUserEmail} = useContext(LogContext);
+  const navigate = useNavigate();
   const [click, setClick] = useState(false)
+
+  const handleLogOut = () => {
+    setUserEmail('');
+    navigate('/login');
+  }
 
   return (
     <>
@@ -33,13 +43,22 @@ const Header = () => {
             <li>
               <Link to='/contact'>Contact</Link>
             </li>
+            <li>
+              <Link to='/chat'>Generate</Link>
+            </li>
+            <li>
+              <Link to='http://localhost:5173'>Create NFT</Link>
+            </li>
+            {/* <li>
+              <Link to='/contact'>Contact</Link>
+            </li> */}
           </ul>
           {/* <div className='start'>
             <div className='button'>GET CERTIFICATE</div>
           </div> */}
-          <button className='toggle' onClick={() => setClick(!click)}>
-            {click ? <i className='fa fa-times'> </i> : <i className='fa fa-bars'></i>}
-          </button>
+          {userEmail && (<button className='logoutbutton' onClick={handleLogOut}>Logout
+            {/* {click ? <i className='fa fa-times'> </i> : <i className='fa fa-bars'></i>} */}
+          </button>)}
         </nav>
       </header>
     </>

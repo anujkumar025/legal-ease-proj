@@ -8,16 +8,22 @@ const Hero = () => {
       <section className='hero'>
         <div className='container'>
           <div className='row'>
-            <Heading subtitle='WELCOME TO LEGAL EASE' title="Simplify. Secure. Summarize. It's LegalEase." />
+            <Heading subtitle='WELCOME TO LEGAL EASE' title="Simplify. Secure. Generate. It's LegalEase." />
             <p>All happy legal agreements are alike, each unhappy one is tangled in its own way.</p>
-            <div className='button' id="abcd">
-              <button className='primary-btn'>
-                GET STARTED NOW <i className='fa fa-long-arrow-alt-right'></i>
+            {/* <a href="http://localhost/3000/chat">
+            <div className="main-button"> Get Started NOw
+             <i className='fa fa-long-arrow-alt-right'></i>
+            </div> 
+            </a> */}
+            {/* <div className='button' id="abcd">
+                <button>
+                GET STARTED NOW
               </button>
-              <button>
+              <a href = "http://localhost/3000/chat"><button>
                 VIEW COURSE <i className='fa fa-long-arrow-alt-right'></i>
-              </button>
-            </div>
+              </button></a>
+              
+             </div> */}
           </div>
         </div>
       </section>

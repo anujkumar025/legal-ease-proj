@@ -14,9 +14,9 @@ const Hblog = () => {
           <div className='grid2'>
             {blog.slice(0, 3).map((val) => (
               <div className='items shadow'>
-                <div className='img'>
+                {/* <div className='img'>
                   <img src={val.cover} alt='' />
-                </div>
+                </div> */}
                 <div className='text'>
                   <div className='admin flexSB'>
                     <span>

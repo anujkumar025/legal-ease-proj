@@ -1,0 +1,44 @@
+.app-container {
+    text-align: center;
+    margin-top: 50px;
+  }
+
+  button {
+    padding: 10px 20px;
+    background-color: #0074d9;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .wish-box {
+    background-color: #f0f0f0;
+    padding: 20px;
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+  }
+  #abc{
+    width: 80%;
+    /* box-sizing: border-box; */
+    padding: 20px;
+    margin-bottom: 0px;
+    max-height: 200px;
+    min-height: 40px;
+    overflow-y: auto;
+    resize: vertical;
+    /* border: 1px solid #ccc;
+    border-radius: 5px; */
+  }
+  
+.outputImage{
+  width:40%;
+  height:70%;
+}
+
+
+body {
+  background-color: rgba(212, 190, 170, 0.4);
+}

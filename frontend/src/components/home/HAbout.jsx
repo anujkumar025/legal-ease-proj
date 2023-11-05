@@ -18,9 +18,9 @@ const HAbout = () => {
                 <div className='items'>
                   <div className='content flex'>
                     <div className='left'>
-                      <div className='img'>
+                      {/* <div className='img'>
                         <img src={val.cover} alt='' />
-                      </div>
+                      </div> */}
                     </div>
                     <div className='text'>
                       <h1>{val.coursesName}</h1>
@@ -36,9 +36,9 @@ const HAbout = () => {
                         {val.courTeacher.map((details) => (
                           <>
                             <div className='box'>
-                              <div className='dimg'>
+                              {/* <div className='dimg'>
                                 <img src={details.dcover} alt='' />
-                              </div>
+                              </div> */}
                               <div className='para'>
                                 <h4>{details.name}</h4>
                               </div>

@@ -1,11 +1,12 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useContext } from 'react';
 import './style.css';
 import axios from 'axios';
 import {useNavigate} from 'react-router-dom';
-// import {LogContext} from './context/LogContext'
+import {LogContext} from './../../context/LogContext'
 
 
 function Login() {
+  const {setUserEmail} = useContext(LogContext);
   const [isSignUp, setIsSignUp] = useState(false);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -35,10 +36,11 @@ function Login() {
         // alert("dgsdfgdfg");
         if(res.data === "User not found"){
           alert("User not registered!");
-          // navigate('/login')
+          navigate('/login')
         }
         else{
           console.log('good here');
+          setUserEmail(email);
           alert("You have succesfully logged in");
         }
         // else if(res.data){alert(res.data);}

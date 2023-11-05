@@ -31,7 +31,7 @@ header ul li a {
   transition: 0.5s;
 }
 header ul li a:hover {
-  color: #1eb2a6;
+  color: #000;
 }
 .start {
   background-color: #1eb2a6;
@@ -39,8 +39,10 @@ header ul li a:hover {
   color: #fff;
   clip-path: polygon(10% 0%, 100% 0, 100% 100%, 0% 100%);
 }
-.toggle {
-  display: none;
+.logoutbutton {
+  /* display: none; */
+  margin-bottom: 20px;
+  margin-right: 20px;
 }
 /*--------header------------*/
 @media screen and (max-width: 768px) {
